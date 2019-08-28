@@ -1,8 +1,9 @@
-from sys import argv
+# Variable input for age.
+age = input("How old are you? ")
+# Variable input for height.
+height = input("How tall are you? ")
+# Variable input for weight.
+weight = input("How much do you weigh? ")
 
-script, first, second, third = argv
-
-print "The script is called: ", script
-print "Your first variable is: ", first
-print "Your second variable is: ", second
-print "Your third variable is: ", third
+# Formatted print string with variables for age, height and weight.
+print(f"So, you're {age} old, {height} tall and {weight} heavy.")

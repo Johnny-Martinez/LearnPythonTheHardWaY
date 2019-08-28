@@ -9,11 +9,7 @@ I'll do a list:
 \t* Catnip\n\t* Grass
 """
 
-print tabby_cat
-print persian_cat
-print backslash_cat
-print fat_cat
-
-while True:
-    for i in ["/", "_", ",", "|", "\\", ",", "|"]:
-        print "%s\r" % i,
+print(tabby_cat)
+print(persian_cat)
+print(backslash_cat)
+print(fat_cat)

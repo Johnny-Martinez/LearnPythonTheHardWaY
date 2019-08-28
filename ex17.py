@@ -3,28 +3,23 @@ from os.path import exists
 
 script, from_file, to_file = argv
 
-print "Copying from %s to %s" % (from_file, to_file)
+print(f"Copying from {from_file} to {to_file}")
 
-#setup variables to copy data to and from
+# We could do these two on one line, how?
+
 in_file = open(from_file)
 indata = in_file.read()
 
-#Tell the user how big the file is.
-print "The input file is %d bytes long" % len(indata)
+print(f"The input file is {len(indata)} bytes long")
 
-#Check to see if there is a new file to copy data to.
-print "Does the output file exist? %r" % exists(to_file)
-print "Ready, hit RETURN to continue, CTRL-C to aboart."
+print(f"Does the output file exist? {exists(to_file)}")
+print("Ready, hit RETURN to continue, CTRL-C to abort.")
+input()
 
-#Waiting on user input.
-raw_input()
-
-#opens the file to write the data to.
 out_file = open(to_file, 'w')
 out_file.write(indata)
 
-print "Alrighty... all done!"
+print("Alright, all done.")
 
-#Closes both the input file and output file.
 out_file.close()
 in_file.close()
